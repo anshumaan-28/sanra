@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Sanra Resort</title>
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav id="nav_bar">
+      <div class="logo">
+        <a href="#">
+          <img src="media/logo.png" alt="" />
+        </a>
+      </div>
+      <ul class="desktop-nav">
+        <li><button onclick="scroll_to('#home',false)">Home</button></li>
+        <li>
+          <button onclick="scroll_to('#services',false)">Services</button>
+        </li>
+        <li><button onclick="scroll_to('#gallery',false)">Gallery</button></li>
+        <li>
+          <button onclick="scroll_to('#location',false)">Location</button>
+        </li>
+        <li><button onclick="scroll_to('footer',false)">Contact Us</button></li>
+      </ul>
+      <div class="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <ul class="mobile-nav">
+      <li class="close-mobile">&times;</li>
+      <li><img src="media/logo.png" width="150px" alt="" /></li>
+      <li><button onclick="scroll_to('#home',true)">Home</button></li>
+      <li><button onclick="scroll_to('#services',true)">Services</button></li>
+      <li><button onclick="scroll_to('#gallery',true)">Gallery</button></li>
+
+      <li><button onclick="scroll_to('#location',true)">Location</button></li>
+      <li><button onclick="scroll_to('footer',true)">Contact Us</button></li>
+    </ul>
+    <section class="hero" id="home">
+      <div class="overlay">
+        <div class="hero-content">
+          <div class="logo">
+            <img src="media/logo.svg" alt="" />
+          </div>
+          <div class="tagline">Experience of a Lifetime.</div>
+          <div class="buttons">
+            <a href="#" class="btn">Book Now &rightarrow;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-story">
+      <div class="content">
+        <div class="title">SANRA RESORT: <span class="accent">Our Story</span></div>
+        <div class="grid">
+          <div class="p">
+            In response to the monotony of traditional hotels and resorts, we've
+            recognized the need for a
+            <span class="accent">refreshing change</span>. Tired of having to
+            travel far for memorable holidays, we've introduced a groundbreaking
+            concept that fuses the allure of the
+            <span class="accent">beach</span> with the enchantment of
+            <span class="accent">mountains</span>.
+          </div>
+          <div class="img">
+            <img
+              src="https://e1.pxfuel.com/desktop-wallpaper/764/354/desktop-wallpaper-resort-1920x1080-for-your-mobile-tablet-beach-hotel.jpg"
+              alt=""
+            />
+          </div>
+          <div class="img">
+            <img
+              src="https://c4.wallpaperflare.com/wallpaper/438/731/741/resort-ocean-swimming-pool-spa-wallpaper-preview.jpg"
+              alt=""
+            />
+          </div>
+          <div class="p">
+            Upon stepping into our establishment, you'll be
+            <span class="accent"> transported to an entirely novel realm </span
+            >, where the fusion of these contrasting landscapes creates an
+            unparalleled experience. It's the
+            <span class="accent"> perfect escape </span> that promises to
+            redefine your idea of a getaway.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dance-floor">
+      <div class="upper">
+        <div class="left">
+          <div class="title">
+            <span class="accent">Elevate your rythm </span>with our DJ and dance
+            floor
+          </div>
+
+          <div class="description">
+            Our DJ and <span class="accent">Elevated</span> dance floor offers a
+            wide range of music that will leave you feeling refreshed and
+            rejuvenated.
+          </div>
+        </div>
+        <div class="right">
+          <img src="media/dance-floor-1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="lower">
+        <div class="left">
+          <img src="media/dance-floor-2.webp" alt="" />
+        </div>
+        <div class="right">
+          <div class="title">
+            An<span class="accent"> Elevated Dance Floor</span> Experience
+          </div>
+
+          <div class="description">
+            Dance to your heart's content on our
+            <span class="accent">Elevated</span> dance floor.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="restaurant-a">
+      <video id="restaurant_bg_vid" src="media/food.mp4" loop muted></video>
+
+      <script>
+        const vid = document.getElementById("restaurant_bg_vid");
+        window.addEventListener("touchstart", function videoStart() {
+          vid.play();
+          window.removeEventListener("touchstart", videoStart);
+        });
+      </script>
+
+      <div class="overlay">
+        <div class="video">
+          <video src="media/food-2.mp4" autoplay loop muted controls></video>
+        </div>
+        <!--Family Restaurant-->
+        <div class="content">
+          <div class="title">
+            <span class="accent">Family Restaurant:</span> A Culinary Journey
+          </div>
+          <div class="description">
+            Our Family Restaurant offers a wide range of cuisines that will
+            leave you and your family craving for more. Experience unmatched
+            culinary delights at our restaurant. Our menu blends global
+            inspiration with local flavors, resulting in exquisite dishes that
+            celebrate taste and innovation. Join us for an unforgettable dining
+            journey that redefines luxury.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dark" id="nav_dark">
+      <div class="restaurant-b">
+        <div class="overlay">
+          <!--Fine Dining Restaurant-->
+          <div class="content">
+            <div class="title">
+              <span class="accent">Fine Dining Restaurant:</span> A Culinary
+              Journey
+            </div>
+            <div class="description">
+              Our Fine Dining Restaurant offers a wide range of cuisines that
+              will leave you craving for more. Experience unmatched culinary
+              delights at our restaurant. Our menu blends global inspiration
+              with local flavors, resulting in exquisite dishes that celebrate
+              taste and innovation. Join us for an unforgettable dining journey
+              that redefines luxury.
+            </div>
+          </div>
+          <div class="image">
+            <img src="media/restaurant.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <section class="dining">
+        <div class="overlay">
+          <div class="content">
+            <div class="title">
+              <span class="accent"> Sanra Dining: </span> Where Taste Meets
+              Luxury
+            </div>
+            <div class="description">
+              Experience unmatched culinary delights at our restaurant. Our menu
+              blends global inspiration with local flavors, resulting in
+              exquisite dishes that celebrate taste and innovation. Join us for
+              an unforgettable dining journey that redefines luxury.
+            </div>
+            <div class="button">
+              <a href="#" class="btn">View Menu &rightarrow;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="services" id="services">
+      <div class="title">Our <span class="accent">Services</span></div>
+      <div class="services-container">
+        <div class="card">
+          <div class="icon">
+            <img src="media/span.png" alt="" />
+          </div>
+          <div class="service-title">SPA</div>
+          <div class="description">
+            Our spa offers a wide range of treatments that will leave you
+            feeling refreshed and rejuvenated.
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <img src="media/cutlery.png" alt="" />
+          </div>
+          <div class="service-title">Restaurant</div>
+          <div class="description">
+            Our restaurant offers a wide range of cuisines that will leave you
+            feeling refreshed and rejuvenated.
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <img src="media/bar.png" alt="" />
+          </div>
+          <div class="service-title">Bar</div>
+          <div class="description">
+            Our bar offers a wide range of drinks that will leave you feeling
+            refreshed and rejuvenated.
+          </div>
+        </div>
+        <br />
+        <div class="card">
+          <div class="icon">
+            <img src="media/dance.png" alt="" />
+          </div>
+          <div class="service-title">DJ & Dance Floor</div>
+          <div class="description">
+            Our DJ and dance floor offers a wide range of music that will leave
+            you feeling refreshed and rejuvenated.
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="gallery" id="gallery">
+      <div class="title">
+        <span class="accent">Gallery:</span> A Glimpse of Paradise
+      </div>
+      <div class="carousel owl-carousel owl-theme">
+        <div class="item">
+          <img src="https://wallpaperaccess.com/full/276233.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="https://images2.alphacoders.com/677/677605.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="https://images3.alphacoders.com/905/905479.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img
+            src="https://getwallpapers.com/wallpaper/full/c/7/3/929758-vertical-summer-background-wallpaper-1920x1200-desktop.jpg"
+            alt=""
+          />
+        </div>
+        <div class="item">
+          <img src="https://wallpaperaccess.com/full/3014596.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img
+            src="https://www.hdnicewallpapers.com/Wallpapers-Download/Fast-Food-Dishes-for-Takeaway-in-Bar-4K-Wallpapers"
+            alt=""
+          />
+        </div>
+        <div class="item">
+          <img src="https://wallpapercave.com/wp/wp6181354.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="https://wallpaperaccess.com/full/5655394.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="title">
+        <span class="accent">Testimonials:</span> What Our Guests Say
+      </div>
+
+      <div class="testimonials-container">
+        <div class="card">
+          <div class="img">
+            <img
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg"
+              alt=""
+            />
+          </div>
+          <div class="title">"<span class="accent">Serene </span> Oasis"</div>
+          <div class="statement">
+            “A tranquil haven with top-notch service and heavenly cuisine. Left
+            us rejuvenated and planning our next visit.” - Mark S.
+          </div>
+        </div>
+        <div class="card">
+          <div class="img">
+            <img
+              src="https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/short/linkedin-profile-picture-maker/dummy_image/thumb/004.webp"
+              alt=""
+            />
+          </div>
+          <div class="title">
+            "<span class="accent">Luxury </span> Redefined"
+          </div>
+          <div class="statement">
+            "Elegant rooms, spa treatments, and beachfront beyond compare.<br />            An unforgettable experience." - Sarah D.
+          </div>
+        </div>
+        <div class="card">
+          <div class="img">
+            <img
+              src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?b=1&s=170667a&w=0&k=20&c=ahypUC_KTc95VOsBkzLFZiCQ0VJwewfrSV43BOrLETM="
+              alt=""
+            />
+          </div>
+          <div class="title">
+            "Family Fun<span class="accent"> Perfection</span>"
+          </div>
+          <div class="statement">
+            “A tranquil haven with top-notch service and heavenly cuisine. Left
+            us rejuvenated and planning our next visit.” - Mark S.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="location" id="location">
+      <div class="title">
+        <span class="accent">Location:</span> Where Paradise Awaits
+      </div>
+      <div class="map" style="width: 100%">
+        <iframe
+          width="90%"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14826.931342763555!2d81.52524940657842!3d21.713097331805905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a285497cd42e5b5%3A0x76a31531d8c4567!2sBemetara%2C%20Chhattisgarh%20491335!5e0!3m2!1sen!2sin!4v1699611032849!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">f"
+        ></iframe>
+      </div>
+    </section>
+
+    <footer>
+      <div class="logo">
+        <img src="media/logo.svg" alt="" />
+      </div>
+
+      <div class="contact">
+        <div class="title">Contact Us</div>
+        <div class="email">
+          Email:
+          <a href="mailto:management@thesanra.in"> management@sanra.in </a>
+        </div>
+        <div class="phone">
+          Phone: <a href="tel:+91 8821025511">+91 8821025511</a>
+        </div>
+      </div>
+
+      <div class="address">
+        <div class="title">Address</div>
+        <div class="line">The Sanra Hotel</div>
+        <div class="line">Central Park</div>
+        <div class="line">Bemetara, Chhattisgarh</div>
+        <div class="line">India</div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="nav.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

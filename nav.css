@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montagu+Slab:opsz,wght@16..144,100;16..144,200;16..144,300;16..144,400;16..144,500;16..144,600;16..144,700&family=MonteCarlo&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  /* mix-blend-mode: difference; */
+  flex-direction: row;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1000;
+}
+
+nav .logo {
+  padding: 0.2rem;
+}
+
+nav .logo a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav .logo img {
+  height: 52px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 0 1rem;
+}
+
+nav ul li button {
+  display: block;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  mix-blend-mode: difference;
+}
+
+nav ul li button:hover {
+  text-decoration: underline;
+}
+
+nav.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+nav.scrolled-dark {
+  background-color: #00000090 !important;
+  transition: background-color 200ms linear;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.778);
+}
+
+/*mobile Navigation*/
+
+@media screen and (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .mobile-toggle > span {
+    display: block;
+    width: 33px;
+    height: 3px;
+    margin: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  .mobile-toggle > span.scrolled {
+    background-color: #000 !important;
+  }
+
+  .mobile-toggle > span.scroll-dark {
+    background-color: #fff !important;
+  }
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000000f6;
+  position: fixed;
+  top: 0;
+  right: -150%;
+  height: 100vh;
+  padding: 2rem;
+  width: 100%;
+  transition: all 0.6s ease-in-out;
+  margin: 0;
+  z-index: 1001;
+}
+
+.active {
+  right: 0 !important;
+}
+
+.mobile-nav li {
+  padding: 1rem;
+  list-style-type: none;
+}
+
+.mobile-nav li button {
+  display: block;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  mix-blend-mode: difference;
+  cursor: pointer;
+}
+
+.mobile-nav li button:hover {
+  text-decoration: underline;
+}
+
+.mobile-nav .close-mobile {
+  font-size: 3rem;
+  color: white;
+  position: relative;
+  top: -8%;
+  right: -40%;
+  cursor: pointer;
+}
